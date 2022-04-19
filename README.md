@@ -7,3 +7,9 @@
 实现方式：爬虫----详细可以参考https://github.com/hsxisawd/spiderclass.git
 
 ## 使用方法：
+1、修改setting文件
+由于我对SECRET_KEY，DATABASES都另外存储在json文件，所以你得把里面改成自己的
+
+2、需要创建数据库，然后把test里面的csv文件导入数据库
+
+3、运行就可以了
