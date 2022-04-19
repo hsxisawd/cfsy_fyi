@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block mian_block %}
+<form method="post" action="{% url 'getdata' %}">
+                {% csrf_token %}
+                <select class="s1" name="s1">
+                    {% for i in request.session.fy %}
+                            <option value="{{ i.E }}">{{ i.C }}</option>
+                    {% endfor %}
+                </select>
+                <select class="s2" name="s2">
+                    {% for i in request.session.fy %}
+                            <option value="{{ i.E }}">{{ i.C }}</option>
+                    {% endfor %}
+                </select>
+
+                <textarea class="text1" name="oldtext" placeholder="输入要翻译的文本">{{ request.session.oldText }}</textarea>
+                <button class="img_tran"></button>
+                <textarea class="text2" readonly="True" placeholder="翻译结果">{{ out }}</textarea>
+</form>
+{% endblock %}
+
